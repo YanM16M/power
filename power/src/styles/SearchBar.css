@@ -1,0 +1,29 @@
+.searchbar_container {
+    display: block;
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+}
+
+.searchbar {
+    font-weight: bold;
+    width: 300px;
+    margin: 10px 0px;
+    padding: 10px 10px;
+    padding-left: 30px;
+    background-color: rgba(var(--primary-color), 0.5);
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    position: relative;
+}
+
+.searchbar:focus {
+    border: 1px solid rgba(var(--secondary-color), 1);
+}
+
+.search-icon {
+    top: 35%;
+    left: 7px;
+    position: absolute;
+}

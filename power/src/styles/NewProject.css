@@ -1,0 +1,22 @@
+.creation_project_container {
+    height: 100%;
+}
+
+.category_selection {
+    justify-content: center;
+}
+
+.label_creation {
+    font-weight: bold;
+    color: rgb(var(--primary-color));
+    margin: 15px 0px;
+}
+
+.input_creation {
+    width: 500px;
+    padding: 10px 10px;
+    background-color: rgba(var(--primary-color), 0.5);
+    border: none;
+    border-bottom: 2px solid gray;
+    outline: none;
+}

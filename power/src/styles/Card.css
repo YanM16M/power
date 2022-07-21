@@ -1,0 +1,15 @@
+.card_container {
+    display: block;
+    width: 150px;
+    height: 180px;
+    padding: 10px;
+    margin: 0px 10px;
+    border: 2px solid rgba(var(--secondary-color), 1);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card_container.selected, .card_container:hover {
+    border: 2px solid rgba(var(--success-color), 1);
+    transition: all 0.15s ease-in-out;
+}

@@ -1,0 +1,53 @@
+.join_container {
+    width: 100%;
+    height: 100vh;
+}
+
+.formulaire_join_container {
+    width: 500px;
+    height: 600px;
+    background-color: rgba(var(--primary-color), 0.1);
+    border-radius: 5px;
+    color: black;
+}
+
+.onglets {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.onglet {
+    line-height: 50px;
+    font-weight: bold;
+    width: 100%;
+    height: 50px;
+    padding: 0px 75px;
+}
+
+.onglet.disabled {
+    border-radius: 0px 5px 0px 10px;
+    background-color: rgba(var(--primary-dark-color), 0.2);
+}
+
+.onglet.disabled:hover {
+    background-color: rgba(var(--primary-color), 0.2);
+    cursor: pointer;
+}
+
+.login_content, .signin_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 35px;
+    height: 100%;
+}
+
+
+.join_info, .join_info {
+    width: 350px;
+    padding: 10px 10px;
+    text-align: left;
+    outline: none;
+    border: none;
+}

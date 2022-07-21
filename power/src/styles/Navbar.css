@@ -1,0 +1,37 @@
+.navbar_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 35px;
+}
+
+.logo {
+    text-decoration: None;
+    font-weight: bold;
+    font-size: 38px;
+    color: rgb(255, 76, 76);
+}
+
+.logo:hover {
+    cursor: pointer;
+}
+
+.list_items {
+    display: flex;
+    list-style-type: none;
+}
+
+.list_item {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 15px;
+}
+
+.list_item:hover {
+    color: rgb(255, 76, 76);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out
+}
