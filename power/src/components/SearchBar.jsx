@@ -7,12 +7,13 @@ function SearchBar({onChange, onEnter}) {
 
     const handleSearch = (event) => {
         setSearch(event.target.value);
+        onChange(search);
     }
 
     const handleKeyUp = (event) => {
-        //if (event.onKeyUp == 13) {
+        if (event.onKeyUp == 13) {
             onEnter(search);
-        //}
+        }
     }
 
     return ( 

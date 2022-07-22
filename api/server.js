@@ -1,53 +1,47 @@
 const express = require('express') // la récupération d'express
 const app = express() // variable utilisant la librairie express
-const question = require('./question.json')
+const projet = require('./projects.json')
+const categories = require('./categories.json')
 var cors = require('cors')
 app.use(cors())
 
 //MiddleWare
 app.use(express.json())
 
-// afficher toutes les questions
-app.get('/question', (req,res) => {
-     res.status(200).json(question)
+//aficher toutes les catégories
+app.get('/categories', (req, res) => {
+	res.status(200).json(categories);
 })
-// afficher une seule question
-app.get('/question/:id', (req,res) => {
+
+
+// afficher un seul projet
+app.get('/projects/:id', (req,res) => {
      const id = parseInt(req.params.id)
-     const laQuestion = question.find(question => question.id === id)
-     res.status(200).json(laQuestion)
+     const leProjet = projet.find(projet => projet.id === id)
+     res.status(200).json(leProjet)
  })
 
- app.get('/question/:id/q', (req,res) => {
-	const id = parseInt(req.params.id)
-	const laQuestion = question.find(question => question.id === id)
-	res.status(200).json(laQuestion.question)
-})
-app.get('/question/:id/r', (req,res) => {
-	const id = parseInt(req.params.id)
-	const laQuestion = question.find(question => question.id === id)
-	res.status(200).json(laQuestion.reponse)
+app.get('/projectsFrom/:from', (req,res) => {
+     const from = req.params.from
+     let projects = [];
+     projet.forEach(item => {
+          if (item.from == from) {
+               projects.push(item);
+          }
+     })
+     res.status(200).json(projects)
+ })
+
+ app.post('/projects', (req,res) => {
+	projet.push(req.body) 
+	res.status(200).json(projet) 
 })
 
- app.post('/question', (req,res) => {
-	question.push(req.body) 
-	res.status(200).json(question) 
-})
-
-app.put('/question/:id', (req,res) => {
-	const id = parseInt(req.params.id)
-	let laQuestion = question.find(question => question.id === id) 
-	laQuestion.theme =req.body.theme, 
-	laQuestion.question =req.body.question, 
-	laQuestion.reponse =req.body.reponse,
-	res.status(200).json(laQuestion) 
-})
-
-app.delete('/question/:id', (req,res) => {
+app.delete('/projects/:id', (req,res) => {
 	const id = parseInt(req.params.id) 
-	let laQuestion = question.find(question => question.id === id) 
-	question.splice(question.indexOf(laQuestion),1) 
-	res.status(200).json(question) 
+	let leProjet = projet.find(projet => projet.id === id) 
+	projet.splice(projet.indexOf(leProjet),1) 
+	res.status(200).json(projet) 
 })
 
 
