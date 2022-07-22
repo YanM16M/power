@@ -33,10 +33,10 @@ function Navbar({token, setToken}) {
                                 <Link className="list_item" to="/myProjects">Mes projets</Link>
                             </li>
                             <li className="list_item">
-                                <Link className="list_item" to="/allProjects">Parcourir les projets</Link>
+                                <Link className="list_item" to="/newProject">Créer un projet</Link>
                             </li>
                             <li className="list_item">
-                                <Link className="list_item" to="/newProject">Créer un projet</Link>
+                                <Link className="list_item" to="/allProjects">Parcourir les projets</Link>
                             </li>
                             <li className="list_item" onClick={logOut}>
                                 Déconnexion

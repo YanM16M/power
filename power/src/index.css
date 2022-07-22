@@ -41,6 +41,8 @@ code {
 .container-row {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 .container-center {
@@ -59,6 +61,7 @@ code {
 
 h1, h2 {
   margin: 30px 0px;
+  margin-bottom: 50px;
 }
 
 .subtitle {

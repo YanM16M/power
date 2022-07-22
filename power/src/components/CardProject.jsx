@@ -2,6 +2,7 @@ import React from 'react'
 import '../styles/CardProject.css';
 
 function CardProject({project}) {
+    console.log(project)
     return ( 
         <div className="card_project_container container-col">
             <span className="card_project_title">
@@ -14,7 +15,10 @@ function CardProject({project}) {
                 {project.description}
             </p>
             <span className="card_project_member">
-                {project.memberCount} membre(s)
+                {project.memberCount} collaborateurs(s)
+            </span>
+            <span className="card_project_creator">
+                Créée par {project.from}
             </span>
         </div>
      );

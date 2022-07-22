@@ -13,7 +13,6 @@ app.get('/categories', (req, res) => {
 	res.status(200).json(categories);
 })
 
-
 // afficher un seul projet
 app.get('/projects/:id', (req,res) => {
      const id = parseInt(req.params.id)
@@ -32,8 +31,7 @@ app.get('/projectsFrom/:from', (req,res) => {
      res.status(200).json(projects)
  })
 
- app.post('/projects', (req,res) => {
-	projet.push(req.body) 
+ app.get('/projects', (req,res) => {
 	res.status(200).json(projet) 
 })
 

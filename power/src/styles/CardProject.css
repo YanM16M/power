@@ -1,9 +1,10 @@
 .card_project_container {
     width: 100%;
-    max-width: 350px;
+    max-width: 250px;
     height: 350px;
     padding: 20px;
     margin-right: 20px;
+    margin-bottom: 20px;
     border: 2px solid rgba(var(--secondary-color), 1);
     border-radius: 5px;
 }
@@ -34,5 +35,10 @@
 
 .card_project_member {
     font-size: 0.8rem;
+    color: rgba(var(--primary-color), 1);
+}
+
+.card_project_creator {
+    font-size: 0.7rem;
     color: rgba(var(--primary-color), 1);
 }

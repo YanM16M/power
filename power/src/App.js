@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import Join from './pages/Join';
 import NewProject from './pages/NewProject';
 import MyProjects from './pages/MyProjects';
+import AllProjects from './pages/AllProjects';
 
 function App() {
   const [token, setToken] = useState('');
@@ -21,7 +22,7 @@ function App() {
               <Route path="/join" element={<Join token={token} setToken={setToken} setMyUsername={setMyUsername}/>} />
               <Route path="/newProject" element={<NewProject myUsername={myUsername}/>} />
               <Route path="/myProjects" element={<MyProjects myUsername={myUsername}/>} />
-              <Route path="/allProjects" element={<NewProject />} />
+              <Route path="/allProjects" element={<AllProjects />} />
             </Routes>
         </Router>
         <Footer />

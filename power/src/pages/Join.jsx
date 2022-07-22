@@ -16,14 +16,14 @@ function Join({token, setToken, setMyUsername}) {
     const [signPassword, setSignPassword] = useState('');
     const [signConfirmPassword, setSignConfirmPassword] = useState('');
 
-    const tryLogin = async (e) => {
+    const tryLogin = async (e)  => {
         e.preventDefault()
         await axios.post('https://reqres.in/api/login', {email: logEmail, password: logPassword})
         .then(res => {
             setToken(res.data['message']);
             setMyUsername(logEmail);
             console.log(res.data);
-            navigate('/newProject');
+            navigate('/myProjects');
             setLogError(false);
         })
         .catch(error => {
@@ -38,7 +38,7 @@ function Join({token, setToken, setMyUsername}) {
             if ('message' in res.data) {
                 setToken(res.data['message']);
                 setMyUsername(signEmail);
-                navigate('/newProject');
+                navigate('/myProjects');
                 console.log(res.data)
             }
             else {

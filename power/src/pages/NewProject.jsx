@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import {useNavigate} from 'react-router-dom';
 import axios from 'axios';
 import Card from '../components/Card';
 import SearchBar from '../components/SearchBar';
@@ -6,6 +7,7 @@ import Button from '../components/Button';
 import '../styles/NewProject.css';
 
 function NewProject({myUsername}) {
+    const navigate = useNavigate();
     const [categories, setCategories] = useState([]);
 
     const [title, setTitle] = useState('');
@@ -43,10 +45,10 @@ function NewProject({myUsername}) {
 
     const addProject = async (e) => {
         e.preventDefault();
-        const memberCount = Math.floor(Math.random() * 125)
+        const memberCount = Math.floor(Math.random() * 5)
         await axios.post('http://localhost:8000/projects', {title: title, description: description, category: category, from: myUsername, memberCount: memberCount})
         .then(res => {
-            alert("cbn");
+            navigate('/myProjects');
         });
     }
 
